@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="index.css" type="text/css">
+  <link rel="stylesheet" href="js-form-validation.css" type="text/css">
+  <script src="registration-form-validation.js"></script>
+</head>
+
+<body class="bg-light">
+  <nav class="navbar navbar-expand-md bg-secondary navbar-dark">
+    <div class="container">
+      <img class="img-fluid d-block" src="CFBL_logo.png">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Tournament Info</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="rules.html">Rules</a>
+              <a class="dropdown-item" href="locations.html">Locations</a>
+              <a class="dropdown-item" href="Prepschedule.html">Schedule</a>
+              <a class="dropdown-item" href="#">Prep Pitching</a>
+              <a class="dropdown-item" href="#">Umpire Rainout</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Registration</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="playerRegistration.html">Player Registration</a>
+              <a class="dropdown-item" href="coachRegistration.html">Coach Registration</a>
+              <a class="dropdown-item" href="#">Insurance Registration</a>
+              <a class="dropdown-item" href="#">Alien Request Form</a>
+              <a class="dropdown-item" href="#">Payment Links</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> About</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">CFBL Coaches</a>
+              <a class="dropdown-item" href="#">Division Levels</a>
+              <a class="dropdown-item" href="#">Manual</a>
+              <a class="dropdown-item" href="#">FAQs</a>
+              <a class="dropdown-item" href="#">Mailing List</a>
+              <a class="dropdown-item" href="#">Policy</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Contact us</a>
+          </li>
+        </ul>
+        <form class="form-inline m-0">
+          <input class="form-control mr-2" type="text" placeholder="Search">
+          <button class="btn btn-primary" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <div class="text-center bg-primary m-0 p-0">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2 bg-primary"></div>
+        <div class="col-md-8 bg-light text-secondary p-3">
+          <div class="cfbl-header">Registration Form</div>
+        </div>
+        <div class="col-md-2 bg-primary"></div>
+      </div>
+    </div>
+  </div>
+  <div class="text-center text-white bg-primary p-0">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2 bg-primary"></div>
+        <div class="col-md-8 bg-light text-secondary">
+          <p>Use tab keys to move from one input field to the next.</p>
+          <form name="registration" onsubmit="return formValidation();">
+            <ul>
+              <li class="text-left"><label for="firstname">First Name:</label></li>
+              <li>
+                <input type="text" name="firstname" size="12"> </li>
+              <li class="text-left"><label for="lastname">Last name:</label></li>
+              <li>
+                <input type="text" name="lastname" size="12"> </li>
+              <li><label for="address">Address:</label></li>
+              <li>
+                <input type="text" name="address" size="50"> </li>
+              <li><label for="city">City:</label></li>
+              <li>
+                <input type="text" name="city"> </li>
+              <li><label for="zip">Zip:</label></li>
+              <li>
+                <input type="text" name="zip"> 
+              </li>
+              <li><label for="phone">Phone Number:</label></li>
+              <li>
+                <input type="text" name="phone"> </li>
+              <li><label for="email">Email:</label></li>
+              <li>
+                <input type="text" name="email" size="50"> 
+              </li>
+              <li><label for="birthdate">Date of Birth(MM/DD/YYYY):</label></li>
+              <li>
+                <input type="text" name="birthdate" size="50"> 
+              </li>
+              <li><label for="year">Graduation Year:</label></li>
+              <li>
+                <input type="text" name="year" size="50"> 
+              </li>
+              <li><label for="position">Primary Position:</label></li>
+              <li><select name="position">  
+                <option selected="" value="Default">(Please select a division)</option>  
+                <option value="RHP">RHP</option>  
+                <option value="LHP">LHP</option> 
+                <option value="C">C</option>  
+                <option value="INF">INF</option> 
+                <option value="OF">OF</option>                    
+              </select></li>
+              <li><label for="highschool">High School:</label></li>
+              <li><select name="highschool">  
+                <option selected="" value="Default">(Please select a school)</option>  
+                <option value="DL">Deland</option>  
+                <option value="LB">Lake Brantley</option>
+                <option value="LH">Lake Howell</option>  
+                <option value="MA">Master's Academy</option>
+                <option value="SM">Seminole</option>  
+                <option value="TC">Timber Creek</option>
+                <option value="HG">Hagerty</option>  
+                <option value="UO">University-Orlando</option>
+                <option value="WS">Winter Springs</option>  
+                <option value="ER">East River</option>
+                <option value="OV">Oviedo</option>  
+                <option value="WP">Winter Park</option>
+                <option value="LY">Lyman</option>  
+                <option value="LM">Lake Mary</option>
+                <option value="CA">Cornerstone Academy</option>  
+                <option value="LMP">Lake Mary Prep</option>
+              </select></li>
+              <li class="text-left"><label for="firstname">Parent Name:</label></li>
+              <li>
+                <input type="text" name="firstname" size="12"> 
+              </li>
+              <li><label for="phone">Parent Phone Number:</label></li>
+              <li>
+                <input type="text" name="phone"> </li>
+              <li><label for="email">Parent Email:</label></li>
+              <li>
+                <input type="text" name="email" size="50"> 
+              </li>
+              <li>
+                <input type="submit" name="submit" value="Submit" clear="left" class="formsubmit"> 
+              </li>
+            </ul>
+          </form>
+        </div>
+        <div class="col-md-2 bg-primary"></div>
+      </div>
+      <div class="row">
+        <div class="bg-primary col-md-2"></div>
+        <div class="bg-light col-md-8 py-3">
+          <div id="carouselArchitecture" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner" role="listbox">
+              <div class="carousel-item">
+                <img class="d-block img-fluid" src="HP_Bottom_Picture2.jpg" data-holder-rendered="true"> </div>
+              <div class="carousel-item">
+                <img class="d-block img-fluid" src="HP_Bottom_Picture4.jpg" data-holder-rendered="true"> </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2 bg-primary"></div>
+      </div>
+    </div>
+  </div>
+  <div class="text-center bg-dark" style="background-image: url(&quot;none&quot;);">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="py-5 col-3 col-md-4" style="background-color:#3b5998">
+          <a href="https://www.facebook.com/Central-Florida-Baseball-League-CFBL-198296288751/" target="_blank"><i class="fa fa-fw fa-facebook fa-3x text-white"></i></a>
+        </div>
+        <div class="py-5 col-3 col-md-4" style="background-color:#00b2ff">
+          <a href="https://twitter.com/CFBLELITE" target="_blank"><i class="fa fa-fw fa-twitter fa-3x text-white"></i></a>
+        </div>
+        <div class="py-5 col-3 col-md-4" style="background-color:#4c68d7">
+          <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-fw fa-instagram fa-3x text-white"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="text-white bg-secondary p-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 p-4">
+          <h2 class="mb-4 text-white">Links</h2>
+          <ul class="list-unstyled">
+            <a href="#" class="text-white">Home</a>
+            <br>
+            <a href="#" class="text-white">Manual</a>
+            <br>
+            <a href="#" class="text-white">FAQs</a>
+            <br>
+            <a href="#" class="text-white">Policy</a>
+          </ul>
+        </div>
+        <div class="col-md-4 py-4">
+          <h2 class="mb-4">Contact</h2>
+          <p>
+            <a href="tel:+246 - 542 550 5462" class="text-white"><i class="fa d-inline mr-3 fa-phone text-white"></i>(407) 555 - 1234</a>
+          </p>
+          <p>
+            <a href="mailto:commissioner@cfbaseball.com" class="text-white"><i class="fa d-inline mr-3 fa-envelope-o text-white"></i>commissioner@cfbaseball.com</a>
+          </p>
+          <p>
+            <a href="https://goo.gl/maps/AUq7b9W7yYJ2" class="text-white" target="_blank"><i class="fa d-inline mr-3 fa-map-marker text-white"></i>365 Park Street, NY</a>
+          </p>
+        </div>
+        <div class="p-4 col-md-4">
+          <h2 class="mb-4 text-light">Subscribe</h2>
+          <form>
+            <fieldset class="form-group text-white"> <label for="exampleInputEmail1">Get our newsletter</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email"> </fieldset>
+            <button type="submit" class="btn btn-outline-light">Submit</button>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 mt-3">
+          <p class="text-center text-white">© Copyright 2017 CFBL - All rights reserved. </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+</body>
+
+</html>
